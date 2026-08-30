@@ -23,6 +23,14 @@
 - 发现几批异常低收率，值得进一步排查
 - 收率主要分布在 0.80 ~ 0.82
 
+## 图表
+
+![温度 vs 收率](scatter_temp_yield.png)
+
+![批次 vs 能耗](bar_energy.png)
+
+![收率分布](hist_yield.png)
+
 ## 技术栈
 
 Python · pandas · matplotlib
