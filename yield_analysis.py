@@ -10,7 +10,8 @@ df = pd.read_csv("C:/Users/biyun/Desktop/yield_data.csv", encoding="utf-8")
 print("温度 平均/最高/最低:", df["温度"].mean(), df["温度"].max(), df["温度"].min())
 print("压力 平均:", df["压力"].mean())
 print("收率 平均:", df["收率"].mean(), "  总能耗:", df["能耗"].sum())
-
+print("温度-收率相关系数:", df["温度"].corr(df["收率"]))
+print("压力-收率相关系数:", df["压力"].corr(df["收率"]))
 
 low = df[df["收率"] < df["收率"].mean() - 0.08]
 print("低收率批次：")
