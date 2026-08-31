@@ -12,6 +12,12 @@ print("压力 平均:", df["压力"].mean())
 print("收率 平均:", df["收率"].mean(), "  总能耗:", df["能耗"].sum())
 print("温度-收率相关系数:", df["温度"].corr(df["收率"]))
 print("压力-收率相关系数:", df["压力"].corr(df["收率"]))
+bins = [60, 75, 85, 100]
+labels = ["低温", "中温", "高温"]
+df["温度档"] = pd.cut(df["温度"], bins=bins, labels=labels)
+avg = df.groupby("温度档")["收率"].mean()
+print("\n每档平均收率:")
+print(avg)
 
 low = df[df["收率"] < df["收率"].mean() - 0.08]
 print("低收率批次：")
