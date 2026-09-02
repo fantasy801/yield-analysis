@@ -34,6 +34,7 @@ axes[0, 1].bar(df["批次"], df["收率"])
 axes[0, 1].set_xlabel("批次")
 axes[0, 1].set_ylabel("收率")
 axes[0, 1].set_title("批次 vs 收率")
+axes[0, 1].tick_params(axis='x', rotation=90)
 
 axes[1, 0].bar(df["批次"], df["能耗"])
 axes[1, 0].set_xlabel("批次")
